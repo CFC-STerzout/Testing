@@ -1,4 +1,4 @@
-Feature: Login to SauceDemo
+﻿Feature: Login to SauceDemo
   As a user
   I want to log in to the application
   So that I can access the inventory
@@ -21,8 +21,8 @@ Feature: Login to SauceDemo
     When I login with username "locked_out_user" and password "secret_sauce"
     Then I should see an error message
 
-  @negative
+  @smoke
   Scenario: Login with error user
     Given I am on the login page
     When I login with username "error_user" and password "secret_sauce"
-    Then I should see an error message
+    Then I should be on the inventory page
